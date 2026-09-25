@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Instagram feed</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="bi bi-instagram"></i>
+                <strong>Instagram</strong>
+            </div>
+            <div class="buttons">
+                <button id="newPostBtn" class="green">
+                    Crear nuevo post
+                </button>
+                <div class="settings">
+                    <button id="settingsBtn" class="gray">
+                        <i class="bi bi-gear"></i>
+                        <i class="bi bi-caret-down-fill"></i>
+                    </button>
+                    <div id="settingsMenu" class="settings-menu">
+                        <div>Profile</div>
+                        <div>Accessibility</div>
+                        <div>Privacy and Data</div>
+                        <hr>
+                        <div class="logout">Log out</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Create a new post</h3>
+                    <button id="closeX">×</button>
+                </div>
+                <div class="modal-body">
+                    <label>Caption:</label>
+                    <textarea placeholder="Add the caption of your post here"></textarea>
+                    <div class="post-options">
+                        <button><i class="bi bi-camera-fill"></i></button>
+                        <button><i class="bi bi-geo-alt-fill"></i></button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="closeBtn">Close</button>
+                    <button class="publish">Publish</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center gap-3 my-3">
+            <button id="gridBtn" class="btn btn-light"><i class="bi bi-grid-3x3-gap-fill"></i></button>
+            <button id="listBtn" class="btn btn-light"><i class="bi bi-square-fill"></i></button>
+        </div>
+        <div id="gallery" class="row g-3">
+            <div class="col-12 col-sm-4">
+                <div class="photo-info">
+                    <h5>Cita con mi novia</h5>
+                </div>
+                <div class="ratio ratio-1x1">
+                    <img src="assets/comida.jfif" class="img-fluid w-100 h-100 object-fit-cover" alt="Foto 1">
+                </div>
+                <div class="photo-description">
+                    <p><strong>528 likes</strong> </p>
+                    <p>Visitando nuestro restaurante favoritp</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="photo-info">
+                    <h5>Día de piscina</h5>
+                </div>
+                <div class="ratio ratio-1x1">
+                    <img src="assets/piscina.jfif" class="img-fluid w-100 h-100 object-fit-cover" alt="Foto 2">
+                </div>
+                <div class="photo-description">
+                    <p><strong>789 likes</strong></p>
+                    <p>De viaje con mis amigos</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="photo-info">
+                    <h5>iglesia del pueblo</h5>
+                </div>
+                <div class="ratio ratio-1x1">
+                    <img src="assets/iglesia.jfif" class="img-fluid w-100 h-100 object-fit-cover" alt="Foto 3">
+                </div>
+                <div class="photo-description">
+                    <p><strong>326 likes</strong></p>
+                    <p>Estabamos almorazando al lado de esta hermosa vista</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="photo-info">
+                    <h5>Ramen</h5>
+                </div>
+                <div class="ratio ratio-1x1">
+                    <img src="assets/ramen.jfif" class="img-fluid w-100 h-100 object-fit-cover" alt="Foto 4">
+                </div>
+                <div class="photo-description">
+                    <p><strong>745 likes</strong></p>
+                    <p>Este dia me invitaron a almorzar mis amigos</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="photo-info">
+                    <h5>Fotito de mi angelito durmiendo</h5>
+                </div>
+                <div class="ratio ratio-1x1">
+                    <img src="assets/sachita1.jfif" class="img-fluid w-100 h-100 object-fit-cover" alt="Foto 5">
+                </div>
+                <div class="photo-description">
+                    <p><strong>745 likes</strong></p>
+                    <p>haciendo pereza juntos<p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="photo-info">
+                    <h5>Asado</h5>
+                </div>
+                <div class="ratio ratio-1x1">
+                    <img src="assets/asado.jfif" class="img-fluid w-100 h-100 object-fit-cover" alt="Foto 6">
+                </div>
+                <div class="photo-description">
+                    <p><strong>745 likes</strong></p>
+                    <p>Un asadito para el estres</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="photo-info">
+                    <h5>Chill</h5>
+                </div>
+                <div class="ratio ratio-1x1">
+                    <img src="assets/cill.jfif" class="img-fluid w-100 h-100 object-fit-cover" alt="Foto 7">
+                </div>
+                <div class="photo-description">
+                    <p><strong>145 likes</strong></p>
+                    <p>Descansando en el trabajo</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="photo-info">
+                    <h5>Creeps and waffles</h5>
+                </div>
+                <div class="ratio ratio-1x1">
+                    <img src="assets/restaurante.jfif" class="img-fluid w-100 h-100 object-fit-cover" alt="Foto 8">
+                </div>
+                <div class="photo-description">
+                    <p><strong>145 likes</strong></p>
+                    <p>Comiendo con mis padres</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="photo-info">
+                    <h5>De perfil se ve mas hermosa</h5>
+                </div>
+                <div class="ratio ratio-1x1">
+                    <img src="assets/sachita.jfif" class="img-fluid w-100 h-100 object-fit-cover" alt="Foto 9">
+                </div>
+                <div class="photo-description">
+                    <p><strong>145 likes</strong></p>
+                    <p>foto inolviable</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
